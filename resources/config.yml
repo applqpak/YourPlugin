@@ -1,0 +1,20 @@
+---
+##################################
+# YourPlugin Made By TheDeibo :D #
+##################################
+
+# PLUGIN COMMAND - Command has to be lower case AND no special characters#
+0: "test"
+# PLUGIN NAME - SHORT AND SIMPLE #
+1: "Example"
+# PLUGIN IT'S SELF#
+2: "Ejemplo"
+3: "Ejemplo"
+4: "Ejemplo"
+5: "Ejemplo"
+6: "Ejemplo"
+7: "Ejemplo"
+8: "Ejamplo"
+# DO NOT ADD MORE COMMANDS, BECAUSE #
+# IT MAY CORRUPT THE COFIG #
+...
