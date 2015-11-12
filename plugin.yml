@@ -1,0 +1,16 @@
+name: YourPlugin
+main: TheDeibo\YourPlugin\Main
+version: 1.0.0
+api: [1.10.0]
+load: POSTWORLD
+author: TheDeibo
+description: Allows the server owner to make their own Plugin
+commands:
+ yourplugin:
+  description: §aDisplays Plugin Infomation
+  usage: "§a/<YourCommand>"
+  permission: thedeibo.yourplugin
+permissions:
+ thedeibo.yourplugin:
+   description: "§a Allows the server owner to make their own Plugin"
+   default: op
