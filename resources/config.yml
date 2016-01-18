@@ -3,18 +3,21 @@
 # YourPlugin Made By TheDeibo :D #
 ##################################
 
-# PLUGIN COMMAND - Command has to be lower case AND no special characters#
-0: "test"
-# PLUGIN NAME - SHORT AND SIMPLE #
-1: "Example"
-# PLUGIN IT'S SELF#
-2: "Ejemplo"
-3: "Ejemplo"
-4: "Ejemplo"
-5: "Ejemplo"
-6: "Ejemplo"
-7: "Ejemplo"
-8: "Ejamplo"
-# DO NOT ADD MORE COMMANDS, BECAUSE #
-# IT MAY CORRUPT THE COFIG #
+# PLUGIN COMMAND - Command has to be lower case AND no special characters
+Command: "test"
+
+# PLUGIN NAME - SHORT AND SIMPLE 
+Name: "Example"
+
+# PLUGIN IT'S SELF
+Slot1: "Ejemplo"
+Slot2: "Ejemplo"
+Slot3: "Ejemplo"
+Slot4: "Ejemplo"
+Slot5: "Ejemplo"
+Slot6: "Ejemplo"
+
+# DO NOT ADD MORE COMMANDS, NAMES, 
+# OR ADD SLOTS TO THE CONGIG, BECAUSE
+# IT MAY CORRUPT THE COFIG 
 ...
