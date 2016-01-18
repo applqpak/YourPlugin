@@ -10,52 +10,46 @@ use pocketmine\command\Command;
 use pocketmine\Player;
 use pocketmine\Server;
 
-use TheDeibo\handlers\EventListener;
-
 class Main extends PluginBase {
     
     public function onEnable()
     {
-        #. This Part may be added on or not, it depends if it works or not... at the moment, it gives an error.
-        #$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-        #
+       /** This Part may be added on or not, it depends if it works or not... at the moment, it gives an error.
+        $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
+        **/
         $this->saveDefaultConfig();
         $this->reloadConfig();
         $this->saveDefaultConfig();
         $this->getLogger()->info(TextFormat::RED . " Yayyy, YourPlugin is running on Version ".$this->getDescription()->getVersion());
     }
-    public function onDisable()
-    {
-        $this->saveDefaultConfig();
-    }
+    public function onDisable() {
+      $this->getLogger()->info(TextFormat::RED . " YourPlugin has been Disabled.");
+      }
+      
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
         $cmd = strtolower($command->getName());
+        $command = $this->getConfig()->get("Command");
         switch ($cmd){
-            case $this->getConfig()->get("0"):
+            case $this->getConfig()->get($command):
                 if (!($sender instanceof Player)){
-                $sender->sendMessage(TEXTFORMAT::GOLD . "--------[" . $this->getConfig()->get("1") . "]--------");
-                $sender->sendMessage . $this->getConfig()->get("2");
-                $sender->sendMessage . $this->getConfig()->get("3");
-                $sender->sendMessage . $this->getConfig()->get("4");
-                $sender->sendMessage . $this->getConfig()->get("5");
-                $sender->sendMessage . $this->getConfig()->get("6");
-                $sender->sendMessage . $this->getConfig()->get("7");
-                $sender->sendMessage . $this->getConfig()->get("8");
-                $sender->sendMessage . $this->getConfig()->get("9");
-                
+                $sender->sendMessage(TEXTFORMAT::GOLD . $this->getConfig()->get("Name"));
+                $sender->sendMessage . $this->getConfig()->get("Slot1");
+                $sender->sendMessage . $this->getConfig()->get("Slot2");
+                $sender->sendMessage . $this->getConfig()->get("Slot3");
+                $sender->sendMessage . $this->getConfig()->get("Slot4");
+                $sender->sendMessage . $this->getConfig()->get("Slot5");
+                $sender->sendMessage . $this->getConfig()->get("Slot6");
                     return true;
                 }
                 $player = $this->getServer()->getPlayer($sender->getName());
-                if ($player->hasPermission("thedeibo.yourplugin")){
-                    $sender->sendMessage("" . "--------[" . $this->getConfig()->get("1") . "]--------");
-                $sender->sendMessage(" " . $this->getConfig()->get("2"));
-                $sender->sendMessage(" " . $this->getConfig()->get("3"));
-                $sender->sendMessage(" " . $this->getConfig()->get("4"));
-                $sender->sendMessage(" " . $this->getConfig()->get("5"));
-                $sender->sendMessage(" " . $this->getConfig()->get("6"));
-                $sender->sendMessage(" " . $this->getConfig()->get("7"));
-                $sender->sendMessage(" " . $this->getConfig()->get("8"));
-                $sender->sendMessage(" " . $this->getConfig()->get("9"));
+                if ($player->hasPermission("yourplugin.command")){
+                $sender->sendMessage . $this->getConfig()->get("Name");
+                $sender->sendMessage . $this->getConfig()->get("Slot1");
+                $sender->sendMessage . $this->getConfig()->get("Slot2");
+                $sender->sendMessage . $this->getConfig()->get("Slot3");
+                $sender->sendMessage . $this->getConfig()->get("Slot4");
+                $sender->sendMessage . $this->getConfig()->get("Slot5");
+                $sender->sendMessage . $this->getConfig()->get("Slot6");
                     return true;
                 }
                 break;
