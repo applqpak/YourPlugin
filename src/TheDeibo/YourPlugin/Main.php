@@ -9,6 +9,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\Player;
 use pocketmine\Server;
+use pocketmine\utils\Config;
 
 class Main extends PluginBase {
     
@@ -17,6 +18,7 @@ class Main extends PluginBase {
        /** This Part may be added on or not, it depends if it works or not... at the moment, it gives an error.
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
         **/
+        @mkdir($this->getDataFolder());
         $this->saveDefaultConfig();
         $this->reloadConfig();
         $this->saveDefaultConfig();
