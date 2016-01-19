@@ -12,5 +12,5 @@ commands:
   permission: thedeibo.yourplugin
 permissions:
  thedeibo.yourplugin:
-   description: "§a Allows the server owner to make their own Plugin"
+   description: §aAllows the server owner to make their own Plugin
    default: op
