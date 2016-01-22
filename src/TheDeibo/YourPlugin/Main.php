@@ -32,7 +32,7 @@ class Main extends PluginBase {
         $cmd = strtolower($command->getName());
         $command = $this->getConfig()->get("Command");
         switch ($cmd){
-            case $this->getConfig()->get($command):
+            case ($command):
                 if (!($sender instanceof Player)){
                 $sender->sendMessage(TEXTFORMAT::GOLD . $this->getConfig()->get("Name"));
                 $sender->sendMessage . $this->getConfig()->get("Slot1");
