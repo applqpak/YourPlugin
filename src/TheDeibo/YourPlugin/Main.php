@@ -1,6 +1,7 @@
 <?php
 namespace TheDeibo\YourPlugin;
 
+use TheDeibo\handlers\EventListener;
 use pocketmine\utils\TextFormat;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -15,9 +16,7 @@ class Main extends PluginBase {
     
     public function onEnable()
     {
-       /** This Part may be added on or not, it depends if it works or not... at the moment, it gives an error.
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-        **/
         @mkdir($this->getDataFolder());
         $this->saveDefaultConfig();
         $this->reloadConfig();
